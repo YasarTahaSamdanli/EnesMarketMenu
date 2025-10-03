@@ -1,0 +1,155 @@
+/* Genel Ayarlar ve Fontlar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Açık gri-mavi arka plan */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Başlık Alanı */
+header {
+    background-color: #5d7496; /* Daha zarif bir mavi tonu */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+header h2 {
+    font-weight: 300;
+    font-size: 1em;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Ana İçerik ve Menü Alanı */
+main {
+    padding: 20px;
+    max-width: 950px; /* Daha geniş alan */
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+#menu h3 {
+    text-align: center;
+    color: #4c627d;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+/* Menü Konteyneri: Mobil Öncelikli Alt Alta */
+.menu-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; /* Tablolar arası boşluk */
+    padding: 0;
+}
+
+/* Masaüstü görünümü için yatay düzenleme */
+@media (min-width: 768px) {
+    .menu-container {
+        flex-direction: row; /* Tablet/Masaüstü: Yan yana */
+        justify-content: space-between; /* İki tablo arası boşluk */
+        align-items: flex-start;
+    }
+    
+    .menu-table {
+        flex: 1; /* Esnek ve eşit genişlik */
+        min-width: 350px;
+        max-width: 48%; /* Konteynerin %48'i kadar yer kaplasın */
+    }
+}
+
+/* Menü Tablosu Stili */
+.menu-table {
+    width: 100%;
+    border-collapse: separate; /* border-spacing için */
+    border-spacing: 0 5px; /* Satırlar arası hafif boşluk */
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden; /* Köşeleri yuvarlamak için */
+}
+
+.menu-table caption {
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #6a82a7;
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 8px 8px 0 0; /* Sadece üst köşeler yuvarlak */
+}
+
+.menu-table th,
+.menu-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: none; /* Sade görünüm için kenarlıkları kaldır */
+}
+
+.menu-table th {
+    background-color: #f7f7f7;
+    font-weight: 500;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-table tbody tr {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03); /* Hafif satır gölgesi */
+}
+
+.menu-table tbody tr:hover {
+    background-color: #f3f7fb; /* Mouse üzerine gelince hafif renk değişimi */
+}
+
+/* Kategori Ayırıcı Satır Stili (Örn: Ekmek Araları, Tostlar) */
+.category-divider td {
+    background-color: #eef2f7 !important; /* Arka planı kesinlikle değiştir */
+    color: #4c627d;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 15px 10px;
+    border-top: 1px solid #d0d5dc;
+    border-bottom: 1px solid #d0d5dc;
+}
+
+/* Fiyat sütununa özel stil */
+.price-column {
+    font-weight: 700;
+    color: #27ae60;
+    text-align: right;
+    width: 30%; 
+    white-space: nowrap;
+}
+
+/* Altbilgi (Footer) */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #4b617c;
+    color: #e0e0e0;
+    font-size: 0.85em;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Kullanılmayan Stillerin Temizlenmesi */
+.dropdown, .dropdown-toggle, .dropdown-menu {
+    display: none; /* HTML'den kaldırılmadığı takdirde gizle */
+}
